@@ -12,7 +12,7 @@ const Weather = () => {
     // OpenWeather Api
     useEffect(() => {
         const fetchData = async () => {
-            const apiKey = '6692162fdde9a2aee7171f8124be924d';
+            const apiKey = 'MY_API_KEY';
             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
             const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
 
