@@ -1,0 +1,42 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/root' as *;
+@use '../abstracts/variables' as *;
+
+/*
+    Containers
+-------------------------------------
+*/
+
+@function get-container($size) {
+  @return map-get($container-sizes-map, $size);
+}
+
+$container-sizes-map: (
+        s: $content__max-width-s,
+        m: $content__max-width-m,
+        l: $content__max-width-l
+);
+
+.container-s {@include container(get-container(s));}
+.container-m,
+.container-nav {@include container(get-container(m));}
+.container-l {@include container(get-container(l));}
+.container-100 {@include container(get-container(100));}
+
+// Containers Padding
+$container-padding-map-p-2: (
+        ".p-2": var(--content__spacing)
+);
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1564px) {
+  @each $container-selectors, $container-padding in $container-padding-map-p-2 {
+    #{$container-selectors} {
+      padding: $container-padding;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use "variables" as *;
+
+/*
+    Root
+-------------------------------------
+*/
+
+:root {
+  // Section
+  --section__space-m: 3rem;
+  --section__space-l: 6rem;
+  --section__division: 50%;
+
+  // Content
+  --content__space-minus: -1rem;
+  --content__space-xs: 0.5rem;
+  --content__space-s: 1rem;
+  --content__space-m: 2rem;
+  --content__space-l: 3rem;
+  --content__border-radius-m: 1rem;
+  --content__border-radius-s: 0.5rem;
+  --content__box-shadow: 0px 0px 10px 0px rgba(171, 178, 178, 1);
+
+  // Fonts
+  --font-style__primary: $font-style__primary;
+  --font-style__secondary: $font-style__secondary;
+
+  // Font Size
+  --font-size__global: 1.25rem;
+  --font-size__text: 1.25rem;
+
+  --font-size__header-s: 1.5rem;
+  --font-size__header-m: 1.775rem;
+  --font-size__header-l: 2.5rem;
+  --font-size__header-xl: 3.125rem;
+  --font-size__header-xxl: 9.375rem;
+
+  // Font Weight
+  --font-weight__light: $font-weight__light;
+  --font-weight__regular: $font-weight__regular;
+  --font-weight__medium: $font-weight__medium;
+  --font-weight__bold: $font-weight__bold;
+
+  // Colors
+  --color__orange: $color__orange;
+  --color__gray: $color__gray;
+  --color__gray-dark: $color__gray-dark;
+  --color__white: $color__white;
+  --color__blue-light: $color__blue-light;
+  --color__black: $color__black;
+
+  // Input
+  --cta__font-size: 1.125rem;
+  --input__width: auto;
+  --input__height: 50px;
+  --input__padding: 1rem;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1482px) {
+  :root {
+    // Section
+    --section__space-m: 2.5rem;
+    --section__space-l: 5rem;
+
+    // Content
+    --content__space-xs: 0.375rem;
+    --content__space-s: 0.75rem;
+    --content__space-m: 1.375rem;
+    --content__space-l: 2rem;
+    --content__spacing: 0 1rem;
+
+    // Font Size
+    --font-size__global: 1.125rem;
+    --font-size__text: 1.125rem;
+
+    --font-size__header-s: 1.25rem;
+    --font-size__header-m: 1.5rem;
+    --font-size__header-l: 2.125rem;
+    --font-size__header-xl: 2.75rem;
+    --font-size__header-xxl: 8.125rem;
+
+    // Form
+    --cta__font-size: 1rem;
+    --input__height: 45px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    // Section
+    --section__space-m: 2rem;
+    --section__space-l: 4rem;
+
+    // Content
+    --content__space-xs: 0.25rem;
+    --content__space-s: 0.5rem;
+    --content__space-m: 1rem;
+    --content__space-l: 1.5rem;
+
+    // Font Size
+    --font-size__global: 1rem;
+    --font-size__text: 1rem;
+
+    --font-size__header-s: 1.125rem;
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 2.5rem;
+    --font-size__header-xxl: 6.875rem;
+
+    // Form
+    --cta__font-size: 0.90rem;
+    --input__height: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    // Font Size
+    --font-size__header-xxl: 5.5rem;
+
+    // Form
+    --input__width: 100%;
+    --input__height: 35px;
+
+  }
+}
+

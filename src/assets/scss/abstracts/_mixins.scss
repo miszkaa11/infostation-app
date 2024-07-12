@@ -1,0 +1,27 @@
+/*
+    Mixins
+-------------------------------------
+*/
+
+// Containers
+@mixin container($max-width) {
+  margin: 0 auto;
+  height: 100%;
+  max-width: $max-width;
+}
+
+// Helpers
+@mixin transition($attribute: all, $time: 0.3s, $easing: ease-in-out) {
+  -webkit-transition: $attribute $time $easing;
+  -moz-transition: $attribute $time $easing;
+  -ms-transition: $attribute $time $easing;
+  -o-transition: $attribute $time $easing;
+  transition: $attribute $time $easing;
+}
+
+// Flexbox
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

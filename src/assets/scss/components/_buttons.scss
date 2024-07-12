@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/root' as *;
+@use '../abstracts/variables' as *;
+
+/*
+    Buttons
+-------------------------------------
+*/
+
+.btn {
+  background-color: $color__orange;
+  font-family: $font-style__primary;
+  font-size: var(--cta__font-size);
+  @include flex-center();
+  color: $color__gray-dark;
+  border-radius: var(--content__border-radius-s);
+  cursor: pointer;
+  border: none;
+  height: var(--input__height);
+  padding: 0 var(--content__space-m);
+  @include transition();
+  &:hover {
+    background-color: $color__gray-dark;
+    color: $color__blue-light;
+  }
+  &.margined {
+    margin-left: var(--content__space-minus);
+  }
+}

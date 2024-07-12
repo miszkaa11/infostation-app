@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as*;
+
+/*
+    Typography
+-------------------------------------
+*/
+
+// Text classes
+$line-height-multiplier-headers: 1;
+$line-height-multiplier-text: 1.2;
+
+@function calc-line-height($font-size, $multiplier) {
+  @return calc($font-size * $multiplier);
+}
+
+$font-sizes-map: (
+        'text': var(--font-size__text),
+        'header-s': var(--font-size__header-s),
+        'header-m': var(--font-size__header-m),
+        'header-l': var(--font-size__header-l),
+        'header-xl': var(--font-size__header-xl),
+        'header-xxl': var(--font-size__header-xxl)
+);
+
+@mixin generate-font-sizes($multiplier-headers, $multiplier-text) {
+  @each $class, $font-size in $font-sizes-map {
+    $multiplier: if($class == 'text', $multiplier-text, $multiplier-headers);
+    .#{$class} {
+      font-size: $font-size;
+      line-height: calc-line-height($font-size, $multiplier);
+    }
+  }
+}
+
+@include generate-font-sizes($line-height-multiplier-headers, $line-height-multiplier-text);
+
+@media screen and (max-width: 1200px) {
+  $line-height-multiplier-headers: 1.2;
+  $line-height-multiplier-text: 1.4;
+
+  @include generate-font-sizes($line-height-multiplier-headers, $line-height-multiplier-text);
+}
+
+

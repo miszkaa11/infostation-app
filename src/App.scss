@@ -1,6 +1,7 @@
 /**
  * Remove the margin in all browsers.
  */
+
 body {
   margin: 0;
 }
@@ -21,11 +22,13 @@ ul {
 
 /* Text-level semantics
    ========================================================================== */
+
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove the outline on focused links when they are also active
  *    (e.g., in the same :active declaration).
  */
+
 a {
   text-decoration: none;
   background-color: transparent; /* 1 */
@@ -35,15 +38,18 @@ a {
 /**
  * 1. Remove list decoration.
  */
+
 li {
   list-style-type: disc;
 }
 
 /* Interactive
    ========================================================================== */
+
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
+
 details {
   display: block;
 }
@@ -51,24 +57,29 @@ details {
 /*
  * Add the correct styles in Edge, IE 10+, and Firefox.
  */
+
 summary {
   display: list-item;
 }
 
 /* Misc
    ========================================================================== */
+
 /**
  * Add the correct display in IE 10+.
  */
+
 template {
   display: none;
 }
 
 /* Forms
    ========================================================================== */
+
 /**
  * 1. Change the font styles in all browsers.
  */
+
 button,
 input,
 optgroup,
@@ -84,6 +95,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
+
 form {
   margin: 0;
 }
@@ -97,6 +109,7 @@ input { /* 1 */
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
+
 button,
 select { /* 1 */
   text-transform: none;
@@ -105,16 +118,18 @@ select { /* 1 */
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
+
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
+
 ::-moz-focus-inner {
   border-style: none;
   padding: 0;
@@ -122,9 +137,11 @@ button,
 
 /* Accessibility
    ========================================================================== */
+
 /**
  * 1. Remove the default button styling in Edge and Firefox.
  */
+
 ::-moz-focus-inner,
 ::-moz-focus-outer { /* 1 */
   border-style: none;
@@ -134,15 +151,18 @@ button,
  * Remove the padding so developers are not caught out when they zero out
  * "body" padding.
  */
+
 :-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
 /* Media
    ========================================================================== */
+
 /**
  * Change the colors for media controls in Edge and IE.
  */
+
 audio,
 canvas,
 progress,
@@ -152,27 +172,33 @@ video {
 
 /* User interface
    ========================================================================== */
+
 /**
  * 1. Remove the padding in Firefox.
  */
+
 ::-webkit-file-upload-button { /* 1 */
   padding: 0;
 }
 
 /* Root
    ========================================================================== */
+
 /**
  * Set the default font family in all browsers.
  */
+
 html {
   font-family: sans-serif;
 }
 
 /* Links
    ========================================================================== */
+
 /**
  * Remove the gray background color from active links in IE 10.
  */
+
 a {
   background-color: transparent;
 }
@@ -180,6 +206,7 @@ a {
 /**
  * Set the link color to match the text color in all browsers.
  */
+
 a:active,
 a:hover {
   outline-width: 0;
@@ -187,13 +214,13 @@ a:hover {
 
 /* Box sizing
    ========================================================================== */
+
 /**
  * 1. Use border-box box-sizing in all browsers.
  */
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
-
-/*# sourceMappingURL=App.css.map */

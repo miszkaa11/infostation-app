@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/root' as *;
+@use '../abstracts/variables' as *;
+
+/*
+    Normalize
+-------------------------------------
+*/
+
+body {
+  font-family: $font-style__primary;
+  background-color: $color__gray-dark;
+  font-size: var(--font-size__global);
+  font-weight: $font-weight__light;
+  color: $color__gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color__orange;
+  font-weight: $font-weight__regular;
+}
+
+h3 {
+  font-family: $font-style__secondary;
+}

@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Root
+-------------------------------------
+*/
+:root {
+  --section__space-m: 3rem;
+  --section__space-l: 6rem;
+  --section__division: 50%;
+  --content__space-minus: -1rem;
+  --content__space-xs: 0.5rem;
+  --content__space-s: 1rem;
+  --content__space-m: 2rem;
+  --content__space-l: 3rem;
+  --content__border-radius-m: 1rem;
+  --content__border-radius-s: 0.5rem;
+  --content__box-shadow: 0px 0px 10px 0px rgba(171, 178, 178, 1);
+  --font-style__primary: $font-style__primary;
+  --font-style__secondary: $font-style__secondary;
+  --font-size__global: 1.25rem;
+  --font-size__text: 1.25rem;
+  --font-size__header-s: 1.5rem;
+  --font-size__header-m: 1.775rem;
+  --font-size__header-l: 2.5rem;
+  --font-size__header-xl: 3.125rem;
+  --font-size__header-xxl: 9.375rem;
+  --font-weight__light: $font-weight__light;
+  --font-weight__regular: $font-weight__regular;
+  --font-weight__medium: $font-weight__medium;
+  --font-weight__bold: $font-weight__bold;
+  --color__orange: $color__orange;
+  --color__gray: $color__gray;
+  --color__gray-dark: $color__gray-dark;
+  --color__white: $color__white;
+  --color__blue-light: $color__blue-light;
+  --color__black: $color__black;
+  --cta__font-size: 1.125rem;
+  --input__width: auto;
+  --input__height: 50px;
+  --input__padding: 1rem;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1482px) {
+  :root {
+    --section__space-m: 2.5rem;
+    --section__space-l: 5rem;
+    --content__space-xs: 0.375rem;
+    --content__space-s: 0.75rem;
+    --content__space-m: 1.375rem;
+    --content__space-l: 2rem;
+    --content__spacing: 0 1rem;
+    --font-size__global: 1.125rem;
+    --font-size__text: 1.125rem;
+    --font-size__header-s: 1.25rem;
+    --font-size__header-m: 1.5rem;
+    --font-size__header-l: 2.125rem;
+    --font-size__header-xl: 2.75rem;
+    --font-size__header-xxl: 8.125rem;
+    --cta__font-size: 1rem;
+    --input__height: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    --section__space-m: 2rem;
+    --section__space-l: 4rem;
+    --content__space-xs: 0.25rem;
+    --content__space-s: 0.5rem;
+    --content__space-m: 1rem;
+    --content__space-l: 1.5rem;
+    --font-size__global: 1rem;
+    --font-size__text: 1rem;
+    --font-size__header-s: 1.125rem;
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 2.5rem;
+    --font-size__header-xxl: 6.875rem;
+    --cta__font-size: 0.90rem;
+    --input__height: 40px;
+  }
+}
+@media screen and (max-width: 650px) {
+  :root {
+    --font-size__header-xxl: 5.5rem;
+    --input__width: 100%;
+    --input__height: 35px;
+  }
+}
+/*
+    Normalize
+-------------------------------------
+*/
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #21252B;
+  font-size: var(--font-size__global);
+  font-weight: 300;
+  color: #ABB2B2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #D19A5E;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+/*
+    Helpers
+-------------------------------------
+*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--section__space-m);
+}
+.title__header {
+  font-family: "Saira Stencil One", sans-serif;
+}
+.title span {
+  color: #43A3EF;
+}
+
+.divider {
+  background-color: #262A31;
+  width: 100%;
+  height: 2px;
+}
+.divider.bg-gray {
+  background-color: #ABB2B2;
+}
+.divider.title {
+  margin: var(--content__space-l) 0;
+}
+.divider.subtitle {
+  margin: var(--content__space-m) 0;
+}
+
+.bg-light {
+  background-color: #262A31;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/*
+    Buttons
+-------------------------------------
+*/
+.btn {
+  background-color: #D19A5E;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: var(--cta__font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #21252B;
+  border-radius: var(--content__border-radius-s);
+  cursor: pointer;
+  border: none;
+  height: var(--input__height);
+  padding: 0 var(--content__space-m);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #21252B;
+  color: #43A3EF;
+}
+.btn.margined {
+  margin-left: var(--content__space-minus);
+}
+
+/*
+    Form
+-------------------------------------
+*/
+input[type=text],
+textarea {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #21252B;
+  font-size: var(--cta__font-size);
+  color: #ABB2B2;
+  outline: none;
+}
+
+input[type=text] {
+  height: var(--input__height);
+  width: var(--input__width);
+  border-top-left-radius: var(--content__border-radius-s);
+  border-bottom-left-radius: var(--content__border-radius-s);
+  padding: 0 var(--content__space-s);
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: var(--content__space-s);
+  border-radius: var(--content__border-radius-m);
+  resize: none;
+}
+
+/*
+    Containers
+-------------------------------------
+*/
+.container-s {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 750px;
+}
+
+.container-m,
+.container-nav {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1500px;
+}
+
+.container-l {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.container-100 {
+  margin: 0 auto;
+  height: 100%;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1564px) {
+  .p-2 {
+    padding: var(--content__spacing);
+  }
+}
+/*
+    Typography
+-------------------------------------
+*/
+.text {
+  font-size: var(--font-size__text);
+  line-height: calc(var(--font-size__text) * 1.2);
+}
+
+.header-s {
+  font-size: var(--font-size__header-s);
+  line-height: calc(var(--font-size__header-s) * 1);
+}
+
+.header-m {
+  font-size: var(--font-size__header-m);
+  line-height: calc(var(--font-size__header-m) * 1);
+}
+
+.header-l {
+  font-size: var(--font-size__header-l);
+  line-height: calc(var(--font-size__header-l) * 1);
+}
+
+.header-xl {
+  font-size: var(--font-size__header-xl);
+  line-height: calc(var(--font-size__header-xl) * 1);
+}
+
+.header-xxl {
+  font-size: var(--font-size__header-xxl);
+  line-height: calc(var(--font-size__header-xxl) * 1);
+}
+
+@media screen and (max-width: 1200px) {
+  .text {
+    font-size: var(--font-size__text);
+    line-height: calc(var(--font-size__text) * 1.4);
+  }
+  .header-s {
+    font-size: var(--font-size__header-s);
+    line-height: calc(var(--font-size__header-s) * 1.2);
+  }
+  .header-m {
+    font-size: var(--font-size__header-m);
+    line-height: calc(var(--font-size__header-m) * 1.2);
+  }
+  .header-l {
+    font-size: var(--font-size__header-l);
+    line-height: calc(var(--font-size__header-l) * 1.2);
+  }
+  .header-xl {
+    font-size: var(--font-size__header-xl);
+    line-height: calc(var(--font-size__header-xl) * 1.2);
+  }
+  .header-xxl {
+    font-size: var(--font-size__header-xxl);
+    line-height: calc(var(--font-size__header-xxl) * 1.2);
+  }
+}
+
+/*# sourceMappingURL=Main.css.map */
