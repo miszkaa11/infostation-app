@@ -10,7 +10,7 @@ const Notepad = () => {
     };
 
     const handleSave = () => {
-        console.log('Zapisano notatkę:', note);
+        console.log('Note saved:', note);
     };
 
     return (
