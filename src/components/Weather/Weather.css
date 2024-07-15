@@ -14,6 +14,8 @@
   --section__space-m: 3rem;
   --section__space-l: 6rem;
   --section__division: 50%;
+  --section__division-mobile-s: 25%;
+  --section__division-mobile-m: 33.333%;
   --content__space-minus: -1rem;
   --content__space-xs: 0.5rem;
   --content__space-s: 1rem;
@@ -51,6 +53,11 @@
     Media queries
 -------------------------------------
 */
+@media screen and (max-width: 1564px) {
+  :root {
+    --content__spacing: 3rem 2rem;
+  }
+}
 @media screen and (max-width: 1482px) {
   :root {
     --section__space-m: 2.5rem;
@@ -59,7 +66,6 @@
     --content__space-s: 0.75rem;
     --content__space-m: 1.375rem;
     --content__space-l: 2rem;
-    --content__spacing: 0 1rem;
     --font-size__global: 1.125rem;
     --font-size__text: 1.125rem;
     --font-size__header-s: 1.25rem;
@@ -92,60 +98,29 @@
 }
 @media screen and (max-width: 650px) {
   :root {
+    --section__division-mobile-s: 33.333%;
+    --section__division-mobile-m: 100%;
     --font-size__header-xxl: 5.5rem;
     --input__width: 100%;
     --input__height: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --section__division-mobile-s: 100%;
+    --font-size__header-xxl: 4.5rem;
   }
 }
 /*
     Weather
 -------------------------------------
 */
-.component .weather {
-  margin-bottom: var(--section__space);
-}
-.component .weather__inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0 var(--content__space-l);
-}
-.component .weather__inner .weather__header {
-  color: #43A3EF;
-}
-.component .weather__inner .weather__header.current-city {
-  flex-basis: 100%;
-  margin-bottom: var(--content__space-l);
-}
-.component .weather__inner .weather__header label {
-  color: #ABB2B2;
-}
-.component .weather__inner .forecast {
-  flex-basis: 100%;
-}
-.component .weather__inner .forecast__title {
-  margin-bottom: var(--content__space-m);
-}
-.component .weather__inner .forecast__tiles {
-  display: flex;
-  justify-content: space-between;
-}
-.component .weather__inner .forecast .forecast__tile p {
-  margin-bottom: calc(var(--content__space-xs) / 2);
-  font-weight: 600;
-}
-.component .weather__inner .forecast .forecast__tile p:last-of-type {
-  margin-bottom: 0;
-}
-.component .weather__inner .forecast .forecast__tile p label {
-  font-weight: 300;
-}
-.component .weather__inner form {
-  display: flex;
-  flex-basis: 100%;
+form {
   margin-top: var(--content__space-l);
+  padding: 0 var(--content__space-l);
+  display: flex;
 }
-.component .weather__inner form .search__btn {
+form .search__btn {
   min-width: 120px;
 }
 
@@ -153,21 +128,5 @@
     Media queries
 -------------------------------------
 */
-@media screen and (max-width: 1050px) {
-  .weather .weather__inner {
-    justify-content: center;
-  }
-  .weather .weather__inner .weather__header {
-    text-align: center;
-    margin: 0.5rem 1rem;
-  }
-  .weather .weather__inner .forecast .forecast__tiles {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .weather .weather__inner .forecast .forecast__tiles .forecast__tile {
-    margin: 1rem;
-  }
-}
 
 /*# sourceMappingURL=Weather.css.map */

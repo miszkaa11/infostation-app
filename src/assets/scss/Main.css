@@ -16,6 +16,8 @@
   --section__space-m: 3rem;
   --section__space-l: 6rem;
   --section__division: 50%;
+  --section__division-mobile-s: 25%;
+  --section__division-mobile-m: 33.333%;
   --content__space-minus: -1rem;
   --content__space-xs: 0.5rem;
   --content__space-s: 1rem;
@@ -53,6 +55,11 @@
     Media queries
 -------------------------------------
 */
+@media screen and (max-width: 1564px) {
+  :root {
+    --content__spacing: 3rem 2rem;
+  }
+}
 @media screen and (max-width: 1482px) {
   :root {
     --section__space-m: 2.5rem;
@@ -61,7 +68,6 @@
     --content__space-s: 0.75rem;
     --content__space-m: 1.375rem;
     --content__space-l: 2rem;
-    --content__spacing: 0 1rem;
     --font-size__global: 1.125rem;
     --font-size__text: 1.125rem;
     --font-size__header-s: 1.25rem;
@@ -94,9 +100,17 @@
 }
 @media screen and (max-width: 650px) {
   :root {
+    --section__division-mobile-s: 33.333%;
+    --section__division-mobile-m: 100%;
     --font-size__header-xxl: 5.5rem;
     --input__width: 100%;
     --input__height: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --section__division-mobile-s: 100%;
+    --font-size__header-xxl: 4.5rem;
   }
 }
 /*
@@ -109,6 +123,11 @@ body {
   font-size: var(--font-size__global);
   font-weight: 300;
   color: #ABB2B2;
+}
+
+.InfoStation {
+  background-color: #262A31;
+  border-radius: var(--content__border-radius-m);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -128,6 +147,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
   margin-bottom: var(--section__space-m);
 }
@@ -139,27 +159,10 @@ h3 {
 }
 
 .divider {
-  background-color: #262A31;
-  width: 100%;
-  height: 2px;
-}
-.divider.bg-gray {
   background-color: #ABB2B2;
-}
-.divider.title {
-  margin: var(--content__space-l) 0;
-}
-.divider.subtitle {
-  margin: var(--content__space-m) 0;
-}
-
-.bg-light {
-  background-color: #262A31;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  width: auto;
+  height: 2px;
+  margin: var(--content__space-l);
 }
 
 .d-flex {
@@ -230,28 +233,10 @@ textarea {
     Containers
 -------------------------------------
 */
-.container-s {
-  margin: 0 auto;
-  height: 100%;
-  max-width: 750px;
-}
-
-.container-m,
-.container-nav {
-  margin: 0 auto;
+.InfoStation {
   height: 100%;
   max-width: 1500px;
-}
-
-.container-l {
-  margin: 0 auto;
-  height: 100%;
-  max-width: 1920px;
-}
-
-.container-100 {
-  margin: 0 auto;
-  height: 100%;
+  margin: var(--section__space-l) auto;
 }
 
 /*
@@ -260,7 +245,7 @@ textarea {
 */
 @media screen and (max-width: 1564px) {
   .p-2 {
-    padding: var(--content__spacing);
+    margin: var(--content__spacing);
   }
 }
 /*

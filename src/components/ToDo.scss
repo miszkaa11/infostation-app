@@ -7,59 +7,55 @@
 -------------------------------------
 */
 
-.component {
-  .to-do {
+.to-do {
+  display: flex;
+  justify-content: space-between;
+  min-height: 272px;
+  padding: 0 var(--content__space-l);
+  .title {
+    flex-basis: 100%;
+  }
+  &__inner {
     display: flex;
-    justify-content: space-between;
-    min-height: 272px;
-    padding: var(--content__space-l) 0;
-    .title {
-      flex-basis: 100%;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: var(--section__division);
+    padding: 0 var(--content__space-l);
+    .to-do__title {
+      margin-bottom: var(--content__space-m);
     }
-    &__inner {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      flex-basis: var(--section__division);
-      padding: 0 var(--content__space-l);
-      .to-do__title {
-        margin-bottom: var(--content__space-m);
-      }
-      &:nth-child(1) {
-        border-right: 2px solid $color__gray;
-      }
-      &:nth-child(2) {
-        .list {
+    &:nth-child(1) {
+      border-right: 2px solid $color__gray;
+    }
+    &:nth-child(2) {
+      .to-do__list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        &--item {
+          background-color: $color__gray-dark;
           display: flex;
           justify-content: space-between;
-          flex-direction: column;
-          width: 100%;
-          &__item {
-            background-color: $color__gray-dark;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--content__space-s);
-            padding-left: var(--content__space-s);
-            border-radius: var(--content__border-radius-s);
-            &:last-of-type {
-              margin-bottom: 0;
-            }
+          align-items: center;
+          margin-bottom: var(--content__space-s);
+          padding-left: var(--content__space-s);
+          border-radius: var(--content__border-radius-s);
+          &:last-of-type {
+            margin-bottom: 0;
           }
         }
-        .clear {
-          display: flex;
-          justify-content: flex-end;
-          width: 100%;
-          margin-top: var(--content__space-l);
-          &__btn {
-            border-radius: var(--content__border-radius-s);
-          }
-        }
+      }
+      .clear {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: var(--content__space-l);
       }
     }
   }
 }
+
 
 /*
     Media queries
@@ -71,6 +67,9 @@
     flex-direction: column;
     .to-do__inner {
       margin-bottom: 2rem;
+      &:nth-child(1) {
+        border-right: none;
+      }
     }
   }
 }

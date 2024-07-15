@@ -5,9 +5,9 @@
 
 // Containers
 @mixin container($max-width) {
-  margin: 0 auto;
   height: 100%;
   max-width: $max-width;
+  margin: var(--section__space-l) auto;
 }
 
 // Helpers

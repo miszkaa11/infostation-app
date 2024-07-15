@@ -12,16 +12,10 @@
 }
 
 $container-sizes-map: (
-        s: $content__max-width-s,
-        m: $content__max-width-m,
-        l: $content__max-width-l
+        m: $content__max-width-m
 );
 
-.container-s {@include container(get-container(s));}
-.container-m,
-.container-nav {@include container(get-container(m));}
-.container-l {@include container(get-container(l));}
-.container-100 {@include container(get-container(100));}
+.InfoStation {@include container(get-container(m));}
 
 // Containers Padding
 $container-padding-map-p-2: (
@@ -36,7 +30,7 @@ $container-padding-map-p-2: (
 @media screen and (max-width: 1564px) {
   @each $container-selectors, $container-padding in $container-padding-map-p-2 {
     #{$container-selectors} {
-      padding: $container-padding;
+      margin: $container-padding;
     }
   }
 }

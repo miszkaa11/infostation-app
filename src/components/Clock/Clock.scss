@@ -1,0 +1,30 @@
+@use '../../assets/scss/abstracts/mixins' as *;
+@use '../../assets/scss/abstracts/root' as *;
+@use '../../assets/scss/abstracts/variables' as *;
+
+/*
+    Clock
+-------------------------------------
+*/
+
+.clock {
+  @include flex-center();
+  flex-direction: column;
+  padding: var(--content__space-l) var(--content__space-l) 0;
+  &__time {
+    color: $color__blue-light;
+  }
+  &__timezone {
+    color: $color__gray;
+  }
+  &__time,
+  &__date {
+    margin-bottom: var(--content__space-s);
+  }
+  &__header,
+  &__date,
+  &__timezone {
+    font-family: $font-style__primary;
+    text-align: center;
+  }
+}

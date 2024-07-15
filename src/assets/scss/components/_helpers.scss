@@ -10,6 +10,7 @@
 // Title
 .title {
   @include flex-center();
+  text-align: center;
   width: 100%;
   margin-bottom: var(--section__space-m);
   &__header {
@@ -22,24 +23,10 @@
 
 // Divider
 .divider {
-  background-color: $color__gray-light;
-  width: 100%;
+  background-color: $color__gray;
+  width: auto;
   height: 2px;
-  &.bg-gray {
-    background-color: $color__gray;
-  }
-  &.title {
-    margin: var(--content__space-l) 0;
-  }
-  &.subtitle {
-    margin: var(--content__space-m) 0;
-  }
-}
-
-// Helpers
-.bg-light {
-  background-color: $color__gray-light;
-  @include transition();
+  margin: var(--content__space-l);
 }
 
 .d-flex {;

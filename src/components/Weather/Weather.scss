@@ -1,0 +1,58 @@
+@use '../../assets/scss/abstracts/mixins' as *;
+@use '../../assets/scss/abstracts/root' as *;
+@use '../../assets/scss/abstracts/variables' as *;
+
+/*
+    Weather
+-------------------------------------
+*/
+
+form {
+  margin-top: var(--content__space-l);
+  padding: 0 var(--content__space-l);
+  display: flex;
+  .search__btn {
+    min-width: 120px;
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+//@media screen and (max-width: 1050px) {
+//  .weather {
+//    .weather__inner {
+//      justify-content: center;
+//      .weather__header {
+//        text-align: center;
+//       margin: 0.5rem 1rem
+//      }
+//      .forecast {
+//        .forecast__title {
+//          text-align: center;
+//        }
+//        .forecast__tiles {
+//          flex-wrap: wrap;
+//          text-align: center;
+//          .forecast__tile {
+//            margin: 1rem;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//@media screen and (max-width: 550px) {
+//  .weather {
+//    .weather__inner {
+//      .forecast {
+//        .forecast__tiles {
+//          justify-content: center;
+//        }
+//      }
+//    }
+//  }
+//}

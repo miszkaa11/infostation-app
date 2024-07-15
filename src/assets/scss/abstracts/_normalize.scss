@@ -15,6 +15,11 @@ body {
   color: $color__gray;
 }
 
+.InfoStation {
+  background-color: $color__gray-light;
+  border-radius: var(--content__border-radius-m);
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: $color__orange;
   font-weight: $font-weight__regular;

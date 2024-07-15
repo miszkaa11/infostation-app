@@ -14,6 +14,8 @@
   --section__space-m: 3rem;
   --section__space-l: 6rem;
   --section__division: 50%;
+  --section__division-mobile-s: 25%;
+  --section__division-mobile-m: 33.333%;
   --content__space-minus: -1rem;
   --content__space-xs: 0.5rem;
   --content__space-s: 1rem;
@@ -51,6 +53,11 @@
     Media queries
 -------------------------------------
 */
+@media screen and (max-width: 1564px) {
+  :root {
+    --content__spacing: 3rem 2rem;
+  }
+}
 @media screen and (max-width: 1482px) {
   :root {
     --section__space-m: 2.5rem;
@@ -59,7 +66,6 @@
     --content__space-s: 0.75rem;
     --content__space-m: 1.375rem;
     --content__space-l: 2rem;
-    --content__spacing: 0 1rem;
     --font-size__global: 1.125rem;
     --font-size__text: 1.125rem;
     --font-size__header-s: 1.25rem;
@@ -92,30 +98,32 @@
 }
 @media screen and (max-width: 650px) {
   :root {
+    --section__division-mobile-s: 33.333%;
+    --section__division-mobile-m: 100%;
     --font-size__header-xxl: 5.5rem;
     --input__width: 100%;
     --input__height: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --section__division-mobile-s: 100%;
+    --font-size__header-xxl: 4.5rem;
   }
 }
 /*
     Notepad
 -------------------------------------
 */
-.component .notepad {
-  margin-bottom: var(--section__space-l);
+.notepad__inner {
+  padding: var(--content__space-l);
 }
-.component .notepad__inner {
-  background-color: #262A31;
-  border-bottom-right-radius: var(--content__border-radius-m);
-  border-bottom-left-radius: var(--content__border-radius-m);
-  padding: 0 var(--content__space-l) var(--content__space-l);
-}
-.component .notepad .cta {
+.notepad .cta {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: var(--content__space-m);
+  margin-top: var(--content__space-l);
 }
 
 /*# sourceMappingURL=NotePad.css.map */
