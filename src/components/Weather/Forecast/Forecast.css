@@ -1,0 +1,158 @@
+/*
+    Mixins
+-------------------------------------
+*/
+/*
+    Variables
+-------------------------------------
+*/
+/*
+    Root
+-------------------------------------
+*/
+:root {
+  --section__space-m: 3rem;
+  --section__space-l: 6rem;
+  --section__division: 50%;
+  --section__division-mobile-s: 25%;
+  --section__division-mobile-m: 33.333%;
+  --content__space-minus: -1rem;
+  --content__space-xs: 0.5rem;
+  --content__space-s: 1rem;
+  --content__space-m: 2rem;
+  --content__space-l: 3rem;
+  --content__border-radius-m: 1rem;
+  --content__border-radius-s: 0.5rem;
+  --content__box-shadow: 0px 0px 10px 0px rgba(171, 178, 178, 1);
+  --font-style__primary: $font-style__primary;
+  --font-style__secondary: $font-style__secondary;
+  --font-size__global: 1.25rem;
+  --font-size__text: 1.25rem;
+  --font-size__header-s: 1.5rem;
+  --font-size__header-m: 1.775rem;
+  --font-size__header-l: 2.5rem;
+  --font-size__header-xl: 3.125rem;
+  --font-size__header-xxl: 9.375rem;
+  --font-weight__light: $font-weight__light;
+  --font-weight__regular: $font-weight__regular;
+  --font-weight__medium: $font-weight__medium;
+  --font-weight__bold: $font-weight__bold;
+  --color__orange: $color__orange;
+  --color__gray: $color__gray;
+  --color__gray-dark: $color__gray-dark;
+  --color__white: $color__white;
+  --color__blue-light: $color__blue-light;
+  --color__black: $color__black;
+  --cta__font-size: 1.125rem;
+  --input__width: auto;
+  --input__height: 50px;
+  --input__padding: 1rem;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1564px) {
+  :root {
+    --content__spacing: 3rem 2rem;
+  }
+}
+@media screen and (max-width: 1482px) {
+  :root {
+    --section__space-m: 2.5rem;
+    --section__space-l: 5rem;
+    --content__space-xs: 0.375rem;
+    --content__space-s: 0.75rem;
+    --content__space-m: 1.375rem;
+    --content__space-l: 2rem;
+    --font-size__global: 1.125rem;
+    --font-size__text: 1.125rem;
+    --font-size__header-s: 1.25rem;
+    --font-size__header-m: 1.5rem;
+    --font-size__header-l: 2.125rem;
+    --font-size__header-xl: 2.75rem;
+    --font-size__header-xxl: 8.125rem;
+    --cta__font-size: 1rem;
+    --input__height: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    --section__space-m: 2rem;
+    --section__space-l: 4rem;
+    --content__space-xs: 0.25rem;
+    --content__space-s: 0.5rem;
+    --content__space-m: 1rem;
+    --content__space-l: 1.5rem;
+    --font-size__global: 1rem;
+    --font-size__text: 1rem;
+    --font-size__header-s: 1.125rem;
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 2.5rem;
+    --font-size__header-xxl: 6.875rem;
+    --cta__font-size: 0.90rem;
+    --input__height: 40px;
+  }
+}
+@media screen and (max-width: 650px) {
+  :root {
+    --section__division-mobile-s: 33.333%;
+    --section__division-mobile-m: 100%;
+    --font-size__header-xxl: 5.5rem;
+    --input__width: 100%;
+    --input__height: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --section__division-mobile-s: 100%;
+    --font-size__header-xxl: 4.5rem;
+  }
+}
+/*
+    Forecast
+-------------------------------------
+*/
+.forecast {
+  padding: 0 var(--content__space-l);
+}
+.forecast__title {
+  margin-bottom: var(--content__space-m);
+}
+.forecast__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.forecast .forecast__tile--text {
+  margin-bottom: calc(var(--content__space-xs) / 2);
+  font-weight: 600;
+}
+.forecast .forecast__tile--text:last-of-type {
+  margin-bottom: 0;
+}
+.forecast .forecast__tile--text label {
+  font-weight: 300;
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+@media screen and (max-width: 1050px) {
+  .forecast .forecast__title {
+    text-align: center;
+  }
+  .forecast .forecast__tiles {
+    justify-content: center;
+  }
+  .forecast .forecast__tiles .forecast__tile {
+    margin: var(--content__space-m);
+    text-align: center;
+    flex-basis: var(--section__division-mobile-s);
+  }
+}
+
+/*# sourceMappingURL=Forecast.css.map */

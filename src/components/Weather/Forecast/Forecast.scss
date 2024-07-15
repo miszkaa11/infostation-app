@@ -1,0 +1,53 @@
+@use '../../../assets/scss/abstracts/mixins' as *;
+@use '../../../assets/scss/abstracts/root' as *;
+@use '../../../assets/scss/abstracts/variables' as *;
+
+/*
+    Forecast
+-------------------------------------
+*/
+
+.forecast {
+  padding: 0 var(--content__space-l);
+  &__title {
+    margin-bottom: var(--content__space-m);
+  }
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .forecast__tile {
+    &--text {
+      margin-bottom: calc(var(--content__space-xs) / 2);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      font-weight: $font-weight__semi-bold;
+      label {
+        font-weight: $font-weight__light;
+      }
+    }
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1050px) {
+  .forecast {
+    .forecast__title {
+      text-align: center;
+    }
+    .forecast__tiles {
+      justify-content: center;
+      .forecast__tile {
+        margin: var(--content__space-m);
+        text-align: center;
+        flex-basis: var(--section__division-mobile-s);
+      }
+    }
+  }
+}

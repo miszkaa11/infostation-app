@@ -1,0 +1,49 @@
+@use '../../../assets/scss/abstracts/mixins' as *;
+@use '../../../assets/scss/abstracts/root' as *;
+@use '../../../assets/scss/abstracts/variables' as *;
+
+/*
+    Current weather
+-------------------------------------
+*/
+
+.current-weather {
+  padding: 0 var(--content__space-l);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .current-weather__header {
+      color: $color__blue-light;
+      &.current-city {
+        flex-basis: 100%;
+        margin-bottom: var(--content__space-l);
+      }
+      label {
+        color: $color__gray;
+      }
+    }
+  }
+}
+
+/*
+    Media queries
+-------------------------------------
+*/
+
+@media screen and (max-width: 1050px) {
+  .current-weather {
+    .current-weather__inner {
+      justify-content: center;
+        .current-weather__header {
+          text-align: center;
+          margin: var(--content__space-xs) var(--content__space-l);
+          flex-basis: var(--section__division-mobile-m);
+          &.current-city {
+            flex-basis: 100%;
+            margin-bottom: 2rem;
+          }
+        }
+    }
+  }
+}
