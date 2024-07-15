@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // Sass
 import './NotePad.scss';
 
 const Notepad = () => {
     const [note, setNote] = useState('');
+
+    useEffect(() => {
+        const savedNote = localStorage.getItem('savedNote');
+        if (savedNote) {
+            setNote(savedNote);
+        }
+    }, []);
 
     const handleChange = (event) => {
         setNote(event.target.value);
@@ -11,6 +18,7 @@ const Notepad = () => {
 
     const handleSave = () => {
         console.log('Note saved:', note);
+        localStorage.setItem('savedNote', note);
     };
 
     return (

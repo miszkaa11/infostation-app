@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // Sass
 import './ToDo.scss';
 
 const ToDo = () => {
     const [items, setItems] = useState([]);
     const [newItem, setNewItem] = useState('');
+
+    // LocalStorage Data
+    useEffect(() => {
+        const storedItems = JSON.parse(localStorage.getItem('todo-items')) || [];
+        setItems(storedItems);
+    }, []);
+
+    // LocalStorage update
+    useEffect(() => {
+        localStorage.setItem('todo-items', JSON.stringify(items));
+    }, [items]);
 
     const addItem = () => {
         if (newItem.trim() !== '') {
