@@ -51,6 +51,9 @@
   --color__blue-light: $color__blue-light;
   --color__black: $color__black;
 
+  // Divider
+  --divider__space: 3rem;
+
   // Input
   --cta__font-size: 1.125rem;
   --input__width: auto;
@@ -65,7 +68,7 @@
 
 @media screen and (max-width: 1564px) {
   :root {
-    --content__spacing: 3rem 2rem;
+    --content__spacing: 3rem 1rem;
   }
 }
 
@@ -80,16 +83,6 @@
     --content__space-s: 0.75rem;
     --content__space-m: 1.375rem;
     --content__space-l: 2rem;
-
-    // Font Size
-    --font-size__global: 1.125rem;
-    --font-size__text: 1.125rem;
-
-    --font-size__header-s: 1.25rem;
-    --font-size__header-m: 1.5rem;
-    --font-size__header-l: 2.125rem;
-    --font-size__header-xl: 2.75rem;
-    --font-size__header-xxl: 8.125rem;
 
     // Form
     --cta__font-size: 1rem;
@@ -110,14 +103,17 @@
     --content__space-l: 1.5rem;
 
     // Font Size
-    --font-size__global: 1rem;
-    --font-size__text: 1rem;
+    --font-size__global: 1.225rem;
+    --font-size__text: 1.225rem;
 
-    --font-size__header-s: 1.125rem;
-    --font-size__header-m: 1.375rem;
-    --font-size__header-l: 1.875rem;
-    --font-size__header-xl: 2.5rem;
-    --font-size__header-xxl: 6.875rem;
+    --font-size__header-s: 1.325rem;
+    --font-size__header-m: 1.5rem;
+    --font-size__header-l: 2.125rem;
+    --font-size__header-xl: 2.75rem;
+    --font-size__header-xxl: 8.125rem;
+
+    // Divider
+    --divider__space: 2rem;
 
     // Form
     --cta__font-size: 0.90rem;
@@ -131,13 +127,19 @@
     --section__division-mobile-s: 33.333%;
     --section__division-mobile-m: 100%;
 
+    // Content
+    --content__space-l: 1rem;
+
     // Font Size
-    --font-size__header-xxl: 5.5rem;
+    --font-size__header-s: 1.225rem;
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 2.5rem;
+    --font-size__header-xxl: 6.875rem;
 
     // Form
     --input__width: 100%;
     --input__height: 35px;
-
   }
 }
 

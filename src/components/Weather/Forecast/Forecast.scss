@@ -18,6 +18,10 @@
     justify-content: space-between;
   }
   .forecast__tile {
+    &--header {
+      font-weight: $font-weight__semi-bold;
+      color: $color__blue-light;
+    }
     &--text {
       margin-bottom: calc(var(--content__space-xs) / 2);
       &:last-of-type {

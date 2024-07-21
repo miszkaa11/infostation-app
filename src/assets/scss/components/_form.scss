@@ -11,9 +11,15 @@ input[type="text"],
 textarea {
   font-family: $font-style__primary;
   background-color: $color__gray-dark;
-  font-size: var(--cta__font-size);
+  font-size: var(--font-size__text);
+  font-weight: $font-weight__regular;
   color: $color__gray;
   outline: none;
+  &::placeholder {
+    font-size: calc(var(--font-size__text) * 0.80);
+    color: $color__gray;
+    opacity: 0.5;
+  }
 }
 
 input[type="text"] {

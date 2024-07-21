@@ -11,6 +11,7 @@
   background-color: $color__orange;
   font-family: $font-style__primary;
   font-size: var(--cta__font-size);
+font-weight: $font-weight__semi-bold;
   @include flex-center();
   color: $color__gray-dark;
   border-radius: var(--content__border-radius-s);

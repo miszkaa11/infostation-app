@@ -21,10 +21,21 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight__light;
+}
+
+h2 {
   color: $color__orange;
-  font-weight: $font-weight__regular;
 }
 
 h3 {
   font-family: $font-style__secondary;
+}
+
+h3, h5 {
+  color: $color__blue-light;
+}
+
+h5 {
+  font-weight: $font-weight__regular;
 }

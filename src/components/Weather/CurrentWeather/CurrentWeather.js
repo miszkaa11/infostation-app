@@ -15,7 +15,7 @@ const CurrentWeather = ({ weatherData, airQualityData, airQualityDescription }) 
                 <h2 className="title__header header-xl">Current weather</h2>
             </div>
             <div className="current-weather__inner">
-                <h3 className="current-weather__header header-l current-city">{weatherData.name}</h3>
+                <h3 className="current-city__header header-l">{weatherData.name}</h3>
                 <h4 className="current-weather__header header-m"><label>Temperature:</label> {main.temp.toFixed(1)}°C</h4>
                 <h4 className="current-weather__header header-m"><label>Weather:</label> {weather[0].main}</h4>
                 <h4 className="current-weather__header header-m"><label>Pressure:</label> {pressure} hPa</h4>

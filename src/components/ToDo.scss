@@ -44,6 +44,13 @@
           &:last-of-type {
             margin-bottom: 0;
           }
+          &.no-tasks {
+            justify-content: center;
+            font-size: calc(var(--font-size__text) * 0.80);
+            font-weight: $font-weight__regular;
+            opacity: 0.5;
+            padding: var(--content__space-s);
+          }
         }
       }
       .clear {

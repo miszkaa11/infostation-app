@@ -43,6 +43,7 @@
   --color__white: $color__white;
   --color__blue-light: $color__blue-light;
   --color__black: $color__black;
+  --divider__space: 3rem;
   --cta__font-size: 1.125rem;
   --input__width: auto;
   --input__height: 50px;
@@ -55,7 +56,7 @@
 */
 @media screen and (max-width: 1564px) {
   :root {
-    --content__spacing: 3rem 2rem;
+    --content__spacing: 3rem 1rem;
   }
 }
 @media screen and (max-width: 1482px) {
@@ -66,13 +67,6 @@
     --content__space-s: 0.75rem;
     --content__space-m: 1.375rem;
     --content__space-l: 2rem;
-    --font-size__global: 1.125rem;
-    --font-size__text: 1.125rem;
-    --font-size__header-s: 1.25rem;
-    --font-size__header-m: 1.5rem;
-    --font-size__header-l: 2.125rem;
-    --font-size__header-xl: 2.75rem;
-    --font-size__header-xxl: 8.125rem;
     --cta__font-size: 1rem;
     --input__height: 45px;
   }
@@ -85,13 +79,14 @@
     --content__space-s: 0.5rem;
     --content__space-m: 1rem;
     --content__space-l: 1.5rem;
-    --font-size__global: 1rem;
-    --font-size__text: 1rem;
-    --font-size__header-s: 1.125rem;
-    --font-size__header-m: 1.375rem;
-    --font-size__header-l: 1.875rem;
-    --font-size__header-xl: 2.5rem;
-    --font-size__header-xxl: 6.875rem;
+    --font-size__global: 1.225rem;
+    --font-size__text: 1.225rem;
+    --font-size__header-s: 1.325rem;
+    --font-size__header-m: 1.5rem;
+    --font-size__header-l: 2.125rem;
+    --font-size__header-xl: 2.75rem;
+    --font-size__header-xxl: 8.125rem;
+    --divider__space: 2rem;
     --cta__font-size: 0.90rem;
     --input__height: 40px;
   }
@@ -100,7 +95,12 @@
   :root {
     --section__division-mobile-s: 33.333%;
     --section__division-mobile-m: 100%;
-    --font-size__header-xxl: 5.5rem;
+    --content__space-l: 1rem;
+    --font-size__header-s: 1.225rem;
+    --font-size__header-m: 1.375rem;
+    --font-size__header-l: 1.875rem;
+    --font-size__header-xl: 2.5rem;
+    --font-size__header-xxl: 6.875rem;
     --input__width: 100%;
     --input__height: 35px;
   }
@@ -154,6 +154,13 @@
 }
 .to-do__inner:nth-child(2) .to-do__list--item:last-of-type {
   margin-bottom: 0;
+}
+.to-do__inner:nth-child(2) .to-do__list--item.no-tasks {
+  justify-content: center;
+  font-size: calc(var(--font-size__text) * 0.8);
+  font-weight: 400;
+  opacity: 0.5;
+  padding: var(--content__space-s);
 }
 .to-do__inner:nth-child(2) .clear {
   display: flex;

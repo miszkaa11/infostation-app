@@ -9,7 +9,7 @@ const Forecast = ({ forecastData, formatDate }) => {
             const date = new Date(forecast.dt * 1000);
             return (
                 <div className="forecast__tile" key={index}>
-                    <h5 className="header-s">{formatDate(date)}</h5>
+                    <h4 className="forecast__tile--header header-s">{formatDate(date)}</h4>
                     <p className="forecast__tile--text text"><label>Temperature:</label> {forecast.main.temp.toFixed(1)}°C</p>
                     <p className="forecast__tile--text text"><label>Weather:</label> {forecast.weather[0].main}</p>
                     <p className="forecast__tile--text text"><label>Wind:</label> {forecast.wind.speed} m/s</p>

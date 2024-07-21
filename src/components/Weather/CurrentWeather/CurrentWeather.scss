@@ -14,14 +14,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .current-weather__header {
-      color: $color__blue-light;
-      &.current-city {
-        flex-basis: 100%;
-        margin-bottom: var(--content__space-l);
-      }
+      font-weight: $font-weight__semi-bold;
       label {
-        color: $color__gray;
+        font-weight: $font-weight__light;
       }
+    }
+    .current-city__header {
+      flex-basis: 100%;
+      margin-bottom: var(--content__space-l);
     }
   }
 }
@@ -35,15 +35,18 @@
   .current-weather {
     .current-weather__inner {
       justify-content: center;
-        .current-weather__header {
-          text-align: center;
-          margin: var(--content__space-xs) var(--content__space-l);
-          flex-basis: var(--section__division-mobile-m);
-          &.current-city {
-            flex-basis: 100%;
-            margin-bottom: 2rem;
-          }
-        }
+      .current-weather__header,
+      .current-city__header {
+        text-align: center;
+      }
+      .current-weather__header {
+        margin: var(--content__space-xs) var(--content__space-l);
+        flex-basis: var(--section__division-mobile-m);
+      }
+      .current-city__header {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+      }
     }
   }
 }
